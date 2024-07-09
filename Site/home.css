@@ -1,0 +1,211 @@
+/* home.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc8CDpgJaqHpZUO0kr6YML0IgnkuLNi_2ZXyya2EnFfOTb8no6qU3NTQOd-ghc0JpwB6w&usqp=CAU") no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+header {
+    background-color: #0c0c0c;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul li:hover {
+    color: #5e05c5;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('background.jpg') no-repeat center center/cover;
+}
+
+.hero h1 {
+    font-size: 3em;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.hero button {
+    padding: 20px 30px;
+    font-size: 1.2em;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.hero button:hover {
+    background-color: #37008f;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    position: relative;
+    text-align: center;
+    
+}
+
+.movie img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    transition: 0.4s;
+}
+
+.movie-item:hover img{
+
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+
+.movie h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 1.2em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100% - 0px); /* Garante que a legenda não ultrapasse as margens */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo da legenda */
+    padding: 120px;
+    color: white;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.carousel-caption p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    opacity: 0.8; /* Opacidade da legenda */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: transparent; /* Fundo transparente */
+    transition: color 0.3s ease; /* Transição suave para a cor do texto */
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    color: rgba(255, 255, 255, 0.7); /* Cor do texto ao passar o mouse */
+}
+
+.login-section {
+    display: flex;
+    align-items: center;
+}
+
+.login-link, .signup-link {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-link:hover, .signup-link:hover {
+    background-color: #2c0694;
+    color: #ffffff;
+}
